@@ -17,11 +17,9 @@
         .swiper { width: 100%; height: calc(100vh - 60px); }
         .swiper-slide { padding: 10px; box-sizing: border-box; overflow-y: auto; }
 
-        /* 修正 1：縮小字卡底部內距，避免將內容往外擠，改由內部滾動控制 */
         .day-card { background: white; border-radius: 20px; min-height: 96%; box-shadow: 0 5px 25px rgba(0,0,0,0.06); padding: 15px 15px 35px 15px; display: flex; flex-direction: column; box-sizing: border-box; }
         .day-title { font-size: 1.3rem; font-weight: bold; margin-bottom: 12px; color: var(--primary); border-left: 6px solid var(--primary); padding-left: 10px; }
 
-        /* 修正 2：加入 min-height: 0 限制，強制子元素在有限高度內分配空間，並略為調整間距 */
         .split-layout { display: flex; flex-direction: column; gap: 15px; flex: 1; min-height: 0; }
         .left-itinerary { width: 100%; padding-right: 0; }
         .right-extra { width: 100%; display: flex; flex-direction: column; min-height: 0; flex: 1; }
@@ -34,8 +32,8 @@
         .name { display: block; color: var(--link); font-size: 0.95rem; font-weight: bold; cursor: pointer; text-decoration: none; }
         .extra-tag { font-size: 0.65rem; color: var(--extra); font-weight: bold; border: 1px solid var(--extra); padding: 1px 4px; border-radius: 3px; margin-left: 4px; vertical-align: middle; }
 
-        /* 修正 3：美食容器改為啟用獨立垂直滾動，並在底部加入緩衝空間，確保最後一項能被完全推上來 */
-        .food-container { flex: 1; overflow-y: auto; padding-right: 5px; padding-bottom: 40px; }
+        /* 這裡已將 padding-bottom 加大到 75px，確保手機版底部有非常充足的空白緩衝 */
+        .food-container { flex: 1; overflow-y: auto; padding-right: 5px; padding-bottom: 75px; }
         .box-header { font-size: 0.9rem; font-weight: bold; color: #856404; margin-bottom: 10px; padding: 10px; background: #FFFBF0; position: sticky; top: 0; z-index: 5; border-radius: 8px; border: 1px solid #ffeeba; }
         .food-item { background: #fff; padding: 10px; border-radius: 12px; margin-bottom: 10px; border: 1px solid #eee; }
         .food-link { color: var(--food); font-weight: bold; font-size: 0.9rem; display: flex; justify-content: space-between; cursor: pointer; text-decoration: none; }
@@ -394,7 +392,6 @@
 <script>
     const swiper = new Swiper('.swiper', { pagination: { el: '.swiper-pagination', clickable: true }, resistanceRatio: 0.5 });
     
-    // 用於安全跳轉至新視窗、防止覆蓋原網頁的強制 Function
     function go(url) {
         window.open(url, '_blank', 'noopener,noreferrer');
     }
