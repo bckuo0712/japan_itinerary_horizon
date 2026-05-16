@@ -17,25 +17,25 @@
         .swiper { width: 100%; height: calc(100vh - 60px); }
         .swiper-slide { padding: 10px; box-sizing: border-box; overflow-y: auto; }
 
-        .day-card { background: white; border-radius: 20px; min-height: 96%; box-shadow: 0 5px 25px rgba(0,0,0,0.06); padding: 15px 15px 80px 15px; display: flex; flex-direction: column; box-sizing: border-box; }
+        /* 修正 1：縮小字卡底部內距，避免將內容往外擠，改由內部滾動控制 */
+        .day-card { background: white; border-radius: 20px; min-height: 96%; box-shadow: 0 5px 25px rgba(0,0,0,0.06); padding: 15px 15px 35px 15px; display: flex; flex-direction: column; box-sizing: border-box; }
         .day-title { font-size: 1.3rem; font-weight: bold; margin-bottom: 12px; color: var(--primary); border-left: 6px solid var(--primary); padding-left: 10px; }
 
-        /* 單欄直向排列 */
-        .split-layout { display: flex; flex-direction: column; gap: 20px; flex: 1; }
+        /* 修正 2：加入 min-height: 0 限制，強制子元素在有限高度內分配空間，並略為調整間距 */
+        .split-layout { display: flex; flex-direction: column; gap: 15px; flex: 1; min-height: 0; }
         .left-itinerary { width: 100%; padding-right: 0; }
-        .right-extra { width: 100%; }
+        .right-extra { width: 100%; display: flex; flex-direction: column; min-height: 0; flex: 1; }
 
         .spot { margin-bottom: 15px; position: relative; padding-left: 20px; border-left: 2px solid #ddd; }
         .spot::before { content: ''; position: absolute; left: -7px; top: 0; width: 12px; height: 12px; background: var(--primary); border-radius: 50%; border: 2px solid white; }
         .spot.extra-spot::before { background: var(--extra); }
         .time { font-size: 0.75rem; color: #888; font-weight: bold; }
         
-        /* 保持原本按鈕/連結樣式，加入 cursor:pointer 提示可點擊 */
         .name { display: block; color: var(--link); font-size: 0.95rem; font-weight: bold; cursor: pointer; text-decoration: none; }
         .extra-tag { font-size: 0.65rem; color: var(--extra); font-weight: bold; border: 1px solid var(--extra); padding: 1px 4px; border-radius: 3px; margin-left: 4px; vertical-align: middle; }
 
-        /* 手機版美食容器樣式 */
-        .food-container { max-height: none; padding-right: 0; }
+        /* 修正 3：美食容器改為啟用獨立垂直滾動，並在底部加入緩衝空間，確保最後一項能被完全推上來 */
+        .food-container { flex: 1; overflow-y: auto; padding-right: 5px; padding-bottom: 40px; }
         .box-header { font-size: 0.9rem; font-weight: bold; color: #856404; margin-bottom: 10px; padding: 10px; background: #FFFBF0; position: sticky; top: 0; z-index: 5; border-radius: 8px; border: 1px solid #ffeeba; }
         .food-item { background: #fff; padding: 10px; border-radius: 12px; margin-bottom: 10px; border: 1px solid #eee; }
         .food-link { color: var(--food); font-weight: bold; font-size: 0.9rem; display: flex; justify-content: space-between; cursor: pointer; text-decoration: none; }
@@ -105,7 +105,7 @@
                         <div class="food-memo">⏱️【11:00-14:30，週一公休】⚠️最晚營業至14:30。若15:00才到茶園會吃不到，建議提早由柳川出發。</div>
                     </div>
                     <div class="food-item">
-                        <span onclick="go('https://www.google.com/maps/search/?api=1&query=道の駅うきは')" class="food-link">道の駅 浮羽</span>
+                        <span onclick="go('https://www.google.com/maps/search/?api=1&query=道の駅うきha')" class="food-link">道の駅 浮羽</span>
                         <span class="food-pos">九州 No.1 休息站</span>
                         <div class="q-box"><span class="q-tag q-low">免排</span></div>
                         <div class="food-memo">⏱️【09:00-18:00，每個月第二個週七公休】建議16:30抵達浮羽時先衝這裡搶購當季水果，再逛老街。</div>
@@ -339,7 +339,7 @@
                         <span onclick="go('https://www.google.com/maps/search/?api=1&query=亀正くるくる寿司')" class="food-link">龜正 旋轉壽司 <i class="fa-solid fa-location-arrow"></i></span>
                         <span class="food-pos">別府完正餐</span>
                         <div class="q-box"><span class="q-tag q-high" style="background:#000">2h+</span></div>
-                        <div class="food-memo">⏱️【11:00-21:00 (可能提早完售)，週三公休】別府排隊之王。若15:00才去海地獄，午餐必定大卡死。建議13:00离开動物園立刻去現場。</div>
+                        <div class="food-memo">⏱️【11:00-21:00 (可能提早完售)，週三公休】別府排隊之王。若15:00才去海地獄，午餐必定大卡死。建議13:00離開動物園立刻去現場。</div>
                     </div>
                     <div class="food-item">
                         <span onclick="go('https://www.google.com/maps/search/?api=1&query=地獄蒸し工房鉄輪')" class="food-link">地獄蒸工房 <i class="fa-solid fa-location-arrow"></i></span>
