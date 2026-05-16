@@ -17,10 +17,11 @@
         .swiper { width: 100%; height: calc(100vh - 60px); }
         .swiper-slide { padding: 10px; box-sizing: border-box; overflow-y: auto; }
 
-        .day-card { background: white; border-radius: 20px; min-height: 96%; box-shadow: 0 5px 25px rgba(0,0,0,0.06); padding: 15px; display: flex; flex-direction: column; }
+        /* 調整卡片底部 padding-bottom 到 80px，留出空白行防止手機遮擋 */
+        .day-card { background: white; border-radius: 20px; min-height: 96%; box-shadow: 0 5px 25px rgba(0,0,0,0.06); padding: 15px 15px 80px 15px; display: flex; flex-direction: column; box-sizing: border-box; }
         .day-title { font-size: 1.3rem; font-weight: bold; margin-bottom: 12px; color: var(--primary); border-left: 6px solid var(--primary); padding-left: 10px; }
 
-        /* 修改為單欄直向排列 */
+        /* 單欄直向排列 */
         .split-layout { display: flex; flex-direction: column; gap: 20px; flex: 1; }
         .left-itinerary { width: 100%; padding-right: 0; }
         .right-extra { width: 100%; }
@@ -32,7 +33,7 @@
         .name { display: block; color: var(--link); text-decoration: none; font-size: 0.95rem; font-weight: bold; }
         .extra-tag { font-size: 0.65rem; color: var(--extra); font-weight: bold; border: 1px solid var(--extra); padding: 1px 4px; border-radius: 3px; margin-left: 4px; vertical-align: middle; }
 
-        /* 調整手機版美食容器滾動，避免與外層滑動衝突 */
+        /* 手機版美食容器樣式 */
         .food-container { max-height: none; padding-right: 0; }
         .box-header { font-size: 0.9rem; font-weight: bold; color: #856404; margin-bottom: 10px; padding: 10px; background: #FFFBF0; position: sticky; top: 0; z-index: 5; border-radius: 8px; border: 1px solid #ffeeba; }
         .food-item { background: #fff; padding: 10px; border-radius: 12px; margin-bottom: 10px; border: 1px solid #eee; }
@@ -42,6 +43,9 @@
         .q-tag { padding: 2px 5px; border-radius: 4px; color: white; font-weight: bold; }
         .q-high { background: #e74c3c; } .q-mid { background: #f39c12; } .q-low { background: #27ae60; }
         .food-memo { font-size: 0.7rem; color: #666; line-height: 1.4; margin-top: 5px; border-top: 1px dashed #eee; padding-top: 5px; }
+        
+        /* 調整 Swiper 分頁鈕位置，避免疊在內容上 */
+        .swiper-pagination { bottom: 15px !important; }
     </style>
 </head>
 <body>
@@ -147,7 +151,7 @@
                         <a href="https://www.google.com/maps/search/?api=1&query=草千里珈琲焙煎所" target="_blank" class="food-link">草千里咖啡</a>
                         <span class="food-pos">看火山必配</span>
                         <div class="q-box"><span class="q-tag q-low">15m</span></div>
-                        <div class="food-memo">⏱️【10:00-18:00】營業至18:00。17:30抵達草千里時請先買咖啡，再去看夕陽。</div>
+                        <div class="food-memo">⏱️【10:00-18:00】營業至18:00。17:30抵達草千里時請先買咖啡，再去看夕陽.</div>
                     </div>
                     <div class="food-item">
                         <a href="https://www.google.com/maps/search/?api=1&query=阿蘇ミルク+阿部牧場" target="_blank" class="food-link">ASO MILK</a>
