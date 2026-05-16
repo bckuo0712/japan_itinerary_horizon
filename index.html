@@ -14,10 +14,12 @@
         header { background: var(--primary); color: white; padding: 15px; text-align: center; height: 60px; box-sizing: border-box; }
         header h1 { margin: 0; font-size: 1.1rem; }
 
-        .swiper { width: 100%; height: calc(100vh - 60px); }
+        /* 修正 swiper 高度，保留底部給分頁圓點的空間 */
+        .swiper { width: 100%; height: calc(100vh - 90px); }
         .swiper-slide { padding: 10px; box-sizing: border-box; overflow-y: auto; }
 
-        .day-card { background: white; border-radius: 20px; min-height: 96%; box-shadow: 0 5px 25px rgba(0,0,0,0.06); padding: 15px 15px 35px 15px; display: flex; flex-direction: column; box-sizing: border-box; }
+        /* 加上底部 margin，確保卡片不會壓到圓點 */
+        .day-card { background: white; border-radius: 20px; min-height: 94%; box-shadow: 0 5px 25px rgba(0,0,0,0.06); padding: 15px 15px 35px 15px; display: flex; flex-direction: column; box-sizing: border-box; margin-bottom: 30px; }
         .day-title { font-size: 1.3rem; font-weight: bold; margin-bottom: 12px; color: var(--primary); border-left: 6px solid var(--primary); padding-left: 10px; }
 
         .split-layout { display: flex; flex-direction: column; gap: 15px; flex: 1; min-height: 0; }
@@ -32,9 +34,12 @@
         .name { display: block; color: var(--link); font-size: 0.95rem; font-weight: bold; cursor: pointer; text-decoration: none; }
         .extra-tag { font-size: 0.65rem; color: var(--extra); font-weight: bold; border: 1px solid var(--extra); padding: 1px 4px; border-radius: 3px; margin-left: 4px; vertical-align: middle; }
 
-        /* 這裡已將 padding-bottom 加大到 75px，確保手機版底部有非常充足的空白緩衝 */
-        .food-container { flex: 1; overflow-y: auto; padding-right: 5px; padding-bottom: 75px; }
-        .box-header { font-size: 0.9rem; font-weight: bold; color: #856404; margin-bottom: 10px; padding: 10px; background: #FFFBF0; position: sticky; top: 0; z-index: 5; border-radius: 8px; border: 1px solid #ffeeba; }
+        .food-container { flex: 1; overflow-y: auto; padding-right: 5px; padding-bottom: 75px; scroll-behavior: smooth; }
+        
+        /* 調整為 flex 佈局以放入回到頂部按鈕 */
+        .box-header { font-size: 0.9rem; font-weight: bold; color: #856404; margin-bottom: 10px; padding: 10px; background: #FFFBF0; position: sticky; top: 0; z-index: 5; border-radius: 8px; border: 1px solid #ffeeba; display: flex; justify-content: space-between; align-items: center; }
+        .top-btn { background: var(--primary); color: white; border: none; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; cursor: pointer; display: flex; align-items: center; gap: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
         .food-item { background: #fff; padding: 10px; border-radius: 12px; margin-bottom: 10px; border: 1px solid #eee; }
         .food-link { color: var(--food); font-weight: bold; font-size: 0.9rem; display: flex; justify-content: space-between; cursor: pointer; text-decoration: none; }
         .food-pos { font-size: 0.75rem; background: #eef7ff; color: #007bff; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-top: 4px; font-weight: bold; }
@@ -43,7 +48,8 @@
         .q-high { background: #e74c3c; } .q-mid { background: #f39c12; } .q-low { background: #27ae60; }
         .food-memo { font-size: 0.7rem; color: #666; line-height: 1.4; margin-top: 5px; border-top: 1px dashed #eee; padding-top: 5px; }
         
-        .swiper-pagination { bottom: 15px !important; }
+        /* 調整分頁位置，確保固定在安全區域 */
+        .swiper-pagination { bottom: 5px !important; }
     </style>
 </head>
 <body>
@@ -64,7 +70,10 @@
                 <div class="spot"><span class="time">17:30</span><span onclick="go('https://www.google.com/maps/search/?api=1&query=浮羽稲荷神社')" class="name">浮羽稻荷神社</span></div>
             </div>
             <div class="right-extra">
-                <div class="box-header">柳川/浮羽美食 (8間)</div>
+                <div class="box-header">
+                    <span>柳川/浮羽美食 (8間)</span>
+                    <button class="top-btn" onclick="scrollToTop(this)"><i class="fa-solid fa-arrow-up-to-line"></i> 置頂</button>
+                </div>
                 <div class="food-container">
                     <div class="food-item">
                         <span onclick="go('https://maps.app.goo.gl/rrWTeZyd71yJVrEx7?g_st=ac')" class="food-link">Casa Cuomo Cafe <i class="fa-solid fa-location-arrow"></i></span>
@@ -131,7 +140,10 @@
                 <div class="spot"><span class="time">17:30</span><span onclick="go('https://www.google.com/maps/search/?api=1&query=草千里')" class="name">草千里夕陽</span></div>
             </div>
             <div class="right-extra">
-                <div class="box-header">熊本/阿蘇美食 (8間)</div>
+                <div class="box-header">
+                    <span>熊本/阿蘇美食 (8間)</span>
+                    <button class="top-btn" onclick="scrollToTop(this)"><i class="fa-solid fa-arrow-up-to-line"></i> 置頂</button>
+                </div>
                 <div class="food-container">
                     <div class="food-item">
                         <span onclick="go('https://www.google.com/maps/search/?api=1&query=勝烈亭+新市街本店')" class="food-link">勝烈亭 豬排 <i class="fa-solid fa-location-arrow"></i></span>
@@ -198,7 +210,10 @@
                 <div class="spot"><span class="time">17:00</span><span onclick="go('https://www.google.com/maps/search/?api=1&query=高千穂峡')" class="name">高千穗峽劃船</span></div>
             </div>
             <div class="right-extra">
-                <div class="box-header">阿蘇/高千穗美食 (8間)</div>
+                <div class="box-header">
+                    <span>阿蘇/高千穗美食 (8間)</span>
+                    <button class="top-btn" onclick="scrollToTop(this)"><i class="fa-solid fa-arrow-up-to-line"></i> 置頂</button>
+                </div>
                 <div class="food-container">
                     <div class="food-item">
                         <span onclick="go('https://www.google.com/maps/search/?api=1&query=いまきん食堂')" class="food-link">いまきん食堂 <i class="fa-solid fa-location-arrow"></i></span>
@@ -264,7 +279,10 @@
                 <div class="spot extra-spot"><span class="time">17:30</span><span onclick="go('https://www.google.com/maps/search/?api=1&query=狭霧台')" class="name">狹霧台展望台 <span class="extra-tag">額外行程</span></span></div>
             </div>
             <div class="right-extra">
-                <div class="box-header">由布院美食 (8間)</div>
+                <div class="box-header">
+                    <span>由布院美食 (8間)</span>
+                    <button class="top-btn" onclick="scrollToTop(this)"><i class="fa-solid fa-arrow-up-to-line"></i> 置頂</button>
+                </div>
                 <div class="food-container">
                     <div class="food-item">
                         <span onclick="go('https://www.google.com/maps/search/?api=1&query=由布まぶし心+金鱗湖本店')" class="food-link">由布まぶし 心 <i class="fa-solid fa-location-arrow"></i></span>
@@ -331,7 +349,10 @@
                 <div class="spot"><span class="time">17:30</span><span onclick="go('https://www.google.com/maps/search/?api=1&query=鳥栖プレミアム+アウトレット')" class="name">鳥栖 Outlet 購物</span></div>
             </div>
             <div class="right-extra">
-                <div class="box-header">別府/大分美食 (8間)</div>
+                <div class="box-header">
+                    <span>別府/大分美食 (8間)</span>
+                    <button class="top-btn" onclick="scrollToTop(this)"><i class="fa-solid fa-arrow-up-to-line"></i> 置頂</button>
+                </div>
                 <div class="food-container">
                     <div class="food-item">
                         <span onclick="go('https://www.google.com/maps/search/?api=1&query=亀正くるくる寿司')" class="food-link">龜正 旋轉壽司 <i class="fa-solid fa-location-arrow"></i></span>
@@ -394,6 +415,15 @@
     
     function go(url) {
         window.open(url, '_blank', 'noopener,noreferrer');
+    }
+
+    // 新增：控制美食清單滾動回最上方的函式
+    function scrollToTop(button) {
+        const headerBox = button.parentElement;
+        const container = headerBox.nextElementSibling;
+        if (container && container.classList.contains('food-container')) {
+            container.scrollTop = 0;
+        }
     }
 </script>
 </body>
