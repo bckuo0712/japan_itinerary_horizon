@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>福岡 5 日自駕行程與餐廳：</title>
+    <title>福岡自駕5天版</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,95 +24,65 @@
         .left-itinerary { flex: 0.9; min-width: 260px; border-right: 1px solid #eee; padding-right: 8px; }
         .right-extra { flex: 1.4; min-width: 320px; }
 
-        /* 左側時間軸 */
         .spot { margin-bottom: 15px; position: relative; padding-left: 20px; border-left: 2px solid #ddd; }
         .spot::before { content: ''; position: absolute; left: -7px; top: 0; width: 12px; height: 12px; background: var(--primary); border-radius: 50%; border: 2px solid white; }
         .spot.extra-spot::before { background: var(--extra); }
         .time { font-size: 0.75rem; color: #888; font-weight: bold; }
         .name { display: block; color: var(--link); text-decoration: none; font-size: 0.95rem; font-weight: bold; }
-        .extra-tag { font-size: 0.65rem; color: var(--extra); font-weight: bold; border: 1px solid var(--extra); padding: 0px 4px; border-radius: 3px; vertical-align: middle; margin-left: 4px; }
-        .spot-desc { font-size: 0.75rem; color: #777; margin-top: 2px; }
+        .extra-tag { font-size: 0.65rem; color: var(--extra); font-weight: bold; border: 1px solid var(--extra); padding: 1px 4px; border-radius: 3px; margin-left: 4px; vertical-align: middle; }
 
-        /* 右側美食區 */
-        .food-container { max-height: 70vh; overflow-y: auto; padding-right: 5px; }
-        .box-header { font-size: 0.9rem; font-weight: bold; color: #856404; margin-bottom: 10px; padding: 5px; background: #FFFBF0; position: sticky; top: 0; z-index: 5; }
+        .food-container { max-height: 72vh; overflow-y: auto; padding-right: 5px; }
+        .box-header { font-size: 0.9rem; font-weight: bold; color: #856404; margin-bottom: 10px; padding: 10px; background: #FFFBF0; position: sticky; top: 0; z-index: 5; border-radius: 8px; border: 1px solid #ffeeba; }
         .food-item { background: #fff; padding: 10px; border-radius: 12px; margin-bottom: 10px; border: 1px solid #eee; }
-        .food-link { color: var(--food); font-weight: bold; text-decoration: none; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center; }
+        .food-link { color: var(--food); font-weight: bold; text-decoration: none; font-size: 0.9rem; display: flex; justify-content: space-between; }
         .food-pos { font-size: 0.75rem; background: #eef7ff; color: #007bff; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-top: 4px; font-weight: bold; }
-        
-        .q-box { display: flex; align-items: center; gap: 5px; margin-top: 6px; font-size: 0.75rem; font-weight: bold; }
-        .q-tag { padding: 2px 5px; border-radius: 4px; color: white; font-size: 0.65rem; }
+        .q-box { display: flex; align-items: center; gap: 5px; margin-top: 6px; font-size: 0.7rem; }
+        .q-tag { padding: 2px 5px; border-radius: 4px; color: white; font-weight: bold; }
         .q-high { background: #e74c3c; } .q-mid { background: #f39c12; } .q-low { background: #27ae60; }
         .food-memo { font-size: 0.7rem; color: #666; line-height: 1.4; margin-top: 5px; border-top: 1px dashed #eee; padding-top: 5px; }
     </style>
 </head>
 <body>
 
-<header><h1>九州 5 日自駕：全攻略 (含 40+ 點位)</h1></header>
+<header><h1>九州 5 日自駕：地圖與美食終極手冊</h1></header>
 
 <div class="swiper"><div class="swiper-wrapper">
         
     <div class="swiper-slide"><div class="day-card">
-        <div class="day-title">Day 01：福岡 ➔ 柳川 ➔ 浮羽</div>
+        <div class="day-title">Day 01：柳川 ➔ 浮羽</div>
         <div class="split-layout">
             <div class="left-itinerary">
-                <div class="spot"><span class="time">11:00</span><a href="https://maps.app.goo.gl/柳川遊船" class="name">柳川遊船體驗</a></div>
-                <div class="spot extra-spot"><span class="time">13:30</span><a href="https://maps.app.goo.gl/柳川散策" class="name">柳川古民家散策 <span class="extra-tag">額外</span></a></div>
-                <div class="spot"><span class="time">15:00</span><a href="https://maps.app.goo.gl/八女茶園" class="name">八女中央大茶園</a></div>
-                <div class="spot extra-spot"><span class="time">16:30</span><a href="https://maps.app.goo.gl/白壁通" class="name">浮羽白壁通老街 <span class="extra-tag">額外</span></a></div>
-                <div class="spot"><span class="time">17:30</span><a href="https://maps.app.goo.gl/浮羽神社" class="name">浮羽稻荷神社</a></div>
+                <div class="spot"><span class="time">11:00</span><a href="https://www.google.com/maps/search/?api=1&query=柳川遊船" target="_blank" class="name">柳川遊船體驗</a></div>
+                <div class="spot extra-spot"><span class="time">13:30</span><a href="https://www.google.com/maps/search/?api=1&query=柳川西鉄" target="_blank" class="name">柳川古民家散策 <span class="extra-tag">額外行程</span></a></div>
+                <div class="spot"><span class="time">15:00</span><a href="https://www.google.com/maps/search/?api=1&query=八女中央大茶園" target="_blank" class="name">八女中央大茶園</a></div>
+                <div class="spot extra-spot"><span class="time">16:30</span><a href="https://www.google.com/maps/search/?api=1&query=吉井町白壁通り" target="_blank" class="name">浮羽白壁通老街 <span class="extra-tag">額外行程</span></a></div>
+                <div class="spot"><span class="time">17:30</span><a href="https://www.google.com/maps/search/?api=1&query=浮羽稲荷神社" target="_blank" class="name">浮羽稻荷神社</a></div>
             </div>
             <div class="right-extra">
-                <div class="box-header">柳川/浮羽美食地圖 (8間)</div>
+                <div class="box-header">柳川/浮羽美食 (8間)</div>
                 <div class="food-container">
                     <div class="food-item">
-                        <a href="https://maps.app.goo.gl/本吉屋" class="food-link">元祖本吉屋 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：遊船 ➔ 茶園 之間</span>
-                        <div class="q-box"><span class="q-tag q-high">排 40-70m</span></div>
-                        <div class="food-memo">蒸籠鰻魚創始店。若本吉屋太久，對面「若松屋」是首選備案。</div>
+                        <a href="https://maps.app.goo.gl/rrWTeZyd71yJVrEx7?g_st=ac" target="_blank" class="food-link">Casa Cuomo Cafe <i class="fa-solid fa-location-arrow"></i></a>
+                        <span class="food-pos">白壁通老街內</span>
+                        <div class="q-box"><span class="q-tag q-mid">20m</span></div>
+                        <div class="food-memo">酒造改建的義式餐廳，名廚 Salvatore Cuomo 監製。</div>
                     </div>
                     <div class="food-item">
-                        <a href="https://maps.app.goo.gl/葡萄之種" class="food-link">葡萄之種 (Cafe) <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：白壁通 ➔ 神社 之間</span>
-                        <div class="q-box"><span class="q-tag q-mid">排 20-40m</span></div>
-                        <div class="food-memo">隱身山間的質感聚落，適合下午茶。</div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=元祖本吉屋" target="_blank" class="food-link">元祖本吉屋 <i class="fa-solid fa-location-arrow"></i></a>
+                        <span class="food-pos">遊船完正餐</span>
+                        <div class="q-box"><span class="q-tag q-high">40-70m</span></div>
+                        <div class="food-memo">蒸籠鰻魚創始店。若人太多可改去「若松屋」。</div>
                     </div>
                     <div class="food-item">
-                        <a href="https://maps.app.goo.gl/DeliBoy" class="food-link">Deli Boy Bros 漢堡 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：前往浮羽神社途中</span>
-                        <div class="q-box"><span class="q-tag q-low">排 10-20m</span></div>
-                        <div class="food-memo">美式漢堡，適合買完去神社野餐看夕陽。</div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=葡萄のたね" target="_blank" class="food-link">葡萄之種 <i class="fa-solid fa-location-arrow"></i></a>
+                        <span class="food-pos">山間質感咖啡</span>
+                        <div class="q-box"><span class="q-tag q-mid">30m</span></div>
                     </div>
-                    <div class="food-item">
-                        <a href="https://maps.app.goo.gl/椛島" class="food-link">椛島冰菓 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：柳川散策時</span>
-                        <div class="q-box"><span class="q-tag q-low">排 5m</span></div>
-                        <div class="food-memo">柳川運河旁的復古冰棒。</div>
-                    </div>
-                    <div class="food-item">
-                        <a href="https://maps.app.goo.gl/八女茶寮" class="food-link">八女茶寮 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：大茶園拍照完</span>
-                        <div class="q-box"><span class="q-tag q-mid">排 20m</span></div>
-                        <div class="food-memo">在茶園上方喝道地抹茶。</div>
-                    </div>
-                    <div class="food-item">
-                        <a href="https://maps.app.goo.gl/暴食" class="food-link">暴食之芋 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：神社完回程</span>
-                        <div class="q-box"><span class="q-tag q-low">排 10m</span></div>
-                        <div class="food-memo">濃郁地瓜甜點，IG 熱門點。</div>
-                    </div>
-                    <div class="food-item">
-                        <a href="https://maps.app.goo.gl/道の駅" class="food-link">道の駅 浮羽 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：離開浮羽前</span>
-                        <div class="q-box"><span class="q-tag q-low">免排</span></div>
-                        <div class="food-memo">採買九州第一的水果。</div>
-                    </div>
-                    <div class="food-item">
-                        <a href="https://maps.app.goo.gl/Casa" class="food-link">Casa Cuomo Cafe <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：白壁通散步時</span>
-                        <div class="q-box"><span class="q-tag q-mid">排 20m</span></div>
-                        <div class="food-memo">百年建築內的義式咖啡。</div>
-                    </div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=Deli+Boy+Bros+Hamburger" target="_blank" class="food-link">Deli Boy 漢堡</a><span class="food-pos">浮羽晚餐首選</span><div class="q-box"><span class="q-tag q-low">15m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=椛島氷菓" target="_blank" class="food-link">椛島冰菓</a><span class="food-pos">柳川散策點心</span><div class="q-box"><span class="q-tag q-low">5m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=八女茶寮" target="_blank" class="food-link">八女茶寮</a><span class="food-pos">大茶園放空</span><div class="q-box"><span class="q-tag q-mid">20m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=道の駅うきは" target="_blank" class="food-link">道の駅 浮羽</a><span class="food-pos">九州 No.1 休息站</span><div class="q-box"><span class="q-tag q-low">免排</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=若松屋" target="_blank" class="food-link">若松屋</a><span class="food-pos">柳川鰻魚二選</span><div class="q-box"><span class="q-tag q-mid">30m</span></div></div>
                 </div>
             </div>
         </div>
@@ -122,63 +92,33 @@
         <div class="day-title">Day 02：熊本 ➔ 阿蘇</div>
         <div class="split-layout">
             <div class="left-itinerary">
-                <div class="spot"><span class="time">09:30</span><a href="https://maps.app.goo.gl/熊本城" class="name">熊本城 / 城彩苑</a></div>
-                <div class="spot extra-spot"><span class="time">13:00</span><a href="https://maps.app.goo.gl/水前寺" class="name">水前寺成趣園 <span class="extra-tag">額外</span></a></div>
-                <div class="spot"><span class="time">15:00</span><a href="https://maps.app.goo.gl/白川水源" class="name">白川水源</a></div>
-                <div class="spot extra-spot"><span class="time">16:30</span><a href="https://maps.app.goo.gl/米塚" class="name">阿蘇米塚 <span class="extra-tag">額外</span></a></div>
-                <div class="spot"><span class="time">17:30</span><a href="https://maps.app.goo.gl/草千里" class="name">草千里夕陽</a></div>
+                <div class="spot"><span class="time">09:30</span><a href="https://www.google.com/maps/search/?api=1&query=熊本城" target="_blank" class="name">熊本城 / 城彩苑</a></div>
+                <div class="spot extra-spot"><span class="time">13:00</span><a href="https://www.google.com/maps/search/?api=1&query=水前寺成趣園" target="_blank" class="name">水前寺成趣園 <span class="extra-tag">額外行程</span></a></div>
+                <div class="spot"><span class="time">15:00</span><a href="https://www.google.com/maps/search/?api=1&query=白川水源" target="_blank" class="name">白川水源</a></div>
+                <div class="spot extra-spot"><span class="time">16:30</span><a href="https://www.google.com/maps/search/?api=1&query=阿蘇米塚" target="_blank" class="name">阿蘇米塚 <span class="extra-tag">額外行程</span></a></div>
+                <div class="spot"><span class="time">17:30</span><a href="https://www.google.com/maps/search/?api=1&query=草千里" target="_blank" class="name">草千里夕陽</a></div>
             </div>
             <div class="right-extra">
-                <div class="box-header">熊本/阿蘇美食地圖 (8間)</div>
+                <div class="box-header">熊本/阿蘇美食 (8間)</div>
                 <div class="food-container">
                     <div class="food-item">
-                        <a href="https://maps.app.goo.gl/勝烈亭" class="food-link">勝烈亭 豬排 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：熊本城 ➔ 水前寺 之間</span>
-                        <div class="q-box"><span class="q-tag q-high">排 60-90m</span></div>
-                        <div class="food-memo">11:15 前抵達門口取號是關鍵。</div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=勝烈亭+新市街本店" target="_blank" class="food-link">勝烈亭 豬排 <i class="fa-solid fa-location-arrow"></i></a>
+                        <span class="food-pos">熊本城完正餐</span>
+                        <div class="q-box"><span class="q-tag q-high">60-90m</span></div>
+                        <div class="food-memo">11:15 前抵達取號！九州豬排天花板。</div>
                     </div>
                     <div class="food-item">
-                        <a href="https://maps.app.goo.gl/黑亭" class="food-link">黑亭拉麵 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：行程結束回到飯店後</span>
-                        <div class="q-box"><span class="q-tag q-mid">排 30-40m</span></div>
-                        <div class="food-memo">熊本拉麵靈魂焦蒜油。</div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=熊本ラーメン+黒亭" target="_blank" class="food-link">黑亭拉麵 <i class="fa-solid fa-location-arrow"></i></a>
+                        <span class="food-pos">熊本市區晚餐</span>
+                        <div class="q-box"><span class="q-tag q-mid">40m</span></div>
+                        <div class="food-memo">靈魂焦蒜油，熊本代表拉麵。</div>
                     </div>
-                    <div class="food-item">
-                        <a href="https://maps.app.goo.gl/草千里Cafe" class="food-link">草千里咖啡焙煎所 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：草千里放空時</span>
-                        <div class="q-box"><span class="q-tag q-low">排 15m</span></div>
-                        <div class="food-memo">對著火山噴煙喝拿鐵。</div>
-                    </div>
-                    <div class="food-item">
-                        <a href="#" class="food-link">山見茶屋 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：熊本城逛完午餐</span>
-                        <div class="q-box"><span class="q-tag q-mid">排 30m</span></div>
-                        <div class="food-memo">推薦高菜飯。</div>
-                    </div>
-                    <div class="food-item">
-                        <a href="#" class="food-link">海膽可樂餅 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：城彩苑散步點心</span>
-                        <div class="q-box"><span class="q-tag q-low">排 5m</span></div>
-                        <div class="food-memo">天草海鮮精華。</div>
-                    </div>
-                    <div class="food-item">
-                        <a href="#" class="food-link">阿蘇 Milk <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：往阿蘇的山路上</span>
-                        <div class="q-box"><span class="q-tag q-low">排 10m</span></div>
-                        <div class="food-memo">金獎牧場鮮乳。</div>
-                    </div>
-                    <div class="food-item">
-                        <a href="#" class="food-link">菅乃屋馬肉 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：熊本市區晚餐</span>
-                        <div class="q-box"><span class="q-tag q-mid">預約免等</span></div>
-                        <div class="food-memo">需提前預訂位子。</div>
-                    </div>
-                    <div class="food-item">
-                        <a href="#" class="food-link">白水之里 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：白川水源參觀後</span>
-                        <div class="q-box"><span class="q-tag q-low">排 15m</span></div>
-                        <div class="food-memo">豆腐御膳料理。</div>
-                    </div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=草千里珈琲焙煎所" target="_blank" class="food-link">草千里咖啡</a><span class="food-pos">看火山必配</span><div class="q-box"><span class="q-tag q-low">15m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=阿蘇ミルク+阿部牧場" target="_blank" class="food-link">ASO MILK</a><span class="food-pos">山路休息必喝</span><div class="q-box"><span class="q-tag q-low">5m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=山見茶屋" target="_blank" class="food-link">山見茶屋</a><span class="food-pos">城彩苑內用餐</span><div class="q-box"><span class="q-tag q-mid">30m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=うにコロッケ" target="_blank" class="food-link">天草海膽可樂餅</a><span class="food-pos">散步點心</span><div class="q-box"><span class="q-tag q-low">5m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=菅乃屋+熊本" target="_blank" class="food-link">菅乃屋馬肉</a><span class="food-pos">精緻晚餐(需預約)</span><div class="q-box"><span class="q-tag q-high">難排</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=白水の里" target="_blank" class="food-link">白水之里 (豆腐)</a><span class="food-pos">白川水源午餐</span><div class="q-box"><span class="q-tag q-low">15m</span></div></div>
                 </div>
             </div>
         </div>
@@ -188,43 +128,38 @@
         <div class="day-title">Day 03：阿蘇 ➔ 高千穗</div>
         <div class="split-layout">
             <div class="left-itinerary">
-                <div class="spot"><span class="time">09:30</span><a href="https://maps.app.goo.gl/火山口" class="name">阿蘇火山口</a></div>
-                <div class="spot extra-spot"><span class="time">11:30</span><a href="https://maps.app.goo.gl/大觀峰" class="name">大觀峰展望台 <span class="extra-tag">額外</span></a></div>
-                <div class="spot"><span class="time">14:00</span><a href="https://maps.app.goo.gl/上色見" class="name">上色見熊野座神社</a></div>
-                <div class="spot extra-spot"><span class="time">16:00</span><a href="https://maps.app.goo.gl/高千穗神社" class="name">高千穗神社 <span class="extra-tag">額外</span></a></div>
-                <div class="spot"><span class="time">17:00</span><a href="https://maps.app.goo.gl/划船" class="name">高千穗峽划船</a></div>
+                <div class="spot"><span class="time">09:30</span><a href="https://www.google.com/maps/search/?api=1&query=阿蘇山火口" target="_blank" class="name">阿蘇火山口</a></div>
+                <div class="spot extra-spot"><span class="time">11:30</span><a href="https://www.google.com/maps/search/?api=1&query=大観峰" target="_blank" class="name">大觀峰展望台 <span class="extra-tag">額外行程</span></a></div>
+                <div class="spot"><span class="time">14:00</span><a href="https://www.google.com/maps/search/?api=1&query=上色見熊野座神社" target="_blank" class="name">上色見熊野座神社</a></div>
+                <div class="spot extra-spot"><span class="time">16:00</span><a href="https://www.google.com/maps/search/?api=1&query=高千穂神社" target="_blank" class="name">高千穗神社 <span class="extra-tag">額外行程</span></a></div>
+                <div class="spot"><span class="time">17:00</span><a href="https://www.google.com/maps/search/?api=1&query=高千穂峡" target="_blank" class="name">高千穗峽划船</a></div>
             </div>
             <div class="right-extra">
-                <div class="box-header">阿蘇/高千穗美食地圖 (8間)</div>
+                <div class="box-header">阿蘇/高千穗美食 (8間)</div>
                 <div class="food-container">
                     <div class="food-item">
-                        <a href="#" class="food-link">いまきん食堂 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：大觀峰 ➔ 神社 之間</span>
-                        <div class="q-box"><span class="q-tag q-high" style="background:black">排 2-3h</span></div>
-                        <div class="food-memo">10:30 先去領票。排不到就改吃「あか牛の館」。</div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=いまきん食堂" target="_blank" class="food-link">いまきん食堂 <i class="fa-solid fa-location-arrow"></i></a>
+                        <span class="food-pos">大觀峰完正餐</span>
+                        <div class="q-box"><span class="q-tag q-high" style="background:#000">2-3h</span></div>
+                        <div class="food-memo">10:30 先去抽票！赤牛丼的神級名店。</div>
                     </div>
                     <div class="food-item">
-                        <a href="#" class="food-link">千穗之家 流水麵 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：划船 ➔ 飯店 之間</span>
-                        <div class="q-box"><span class="q-tag q-high">排 45-60m</span></div>
-                        <div class="food-memo">最具儀式感的涼麵體驗。</div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=高千穂牛レストラン和" target="_blank" class="food-link">高千穗牛 燒肉和 <i class="fa-solid fa-location-arrow"></i></a>
+                        <span class="food-pos">高千穗住宿晚餐</span>
+                        <div class="q-box"><span class="q-tag q-mid">預約免等</span></div>
+                        <div class="food-memo">JA 直營，高千穗牛最佳體驗。</div>
                     </div>
                     <div class="food-item">
-                        <a href="#" class="food-link">高千穗牛燒肉 和 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：高千穗住宿當晚</span>
-                        <div class="q-box"><span class="q-tag q-mid">建議預約</span></div>
-                        <div class="food-memo">日本第一和牛獲獎店。</div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=千穂の家+元祖流しそうめん" target="_blank" class="food-link">千穗之家 流水麵 <i class="fa-solid fa-location-arrow"></i></a>
+                        <span class="food-pos">划船區旁</span>
+                        <div class="q-box"><span class="q-tag q-high">50m</span></div>
+                        <div class="food-memo">流水涼麵發源地，好玩也好吃。</div>
                     </div>
-                    <div class="food-item">
-                        <a href="#" class="food-link">あか牛の館 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：神社完午餐備案</span>
-                        <div class="q-box"><span class="q-tag q-mid">排 30m</span></div>
-                        <div class="food-memo">牧場直營赤牛丼。</div>
-                    </div>
-                    <div class="food-item"><a href="#" class="food-link">高千穗牛可樂餅 <i class="fa-solid fa-location-dot"></i></a><span class="food-pos">散步點心</span><div class="q-box"><span class="q-tag q-low">5m</span></div></div>
-                    <div class="food-item"><a href="#" class="food-link">阿蘇菓子工房 <i class="fa-solid fa-location-dot"></i></a><span class="food-pos">午茶甜點</span><div class="q-box"><span class="q-tag q-low">10m</span></div></div>
-                    <div class="food-item"><a href="#" class="food-link">天岩戶 Cafe <i class="fa-solid fa-location-dot"></i></a><span class="food-pos">參拜後休息</span><div class="q-box"><span class="q-tag q-low">15m</span></div></div>
-                    <div class="food-item"><a href="#" class="food-link">高千穗烘焙坊 <i class="fa-solid fa-location-dot"></i></a><span class="food-pos">隔日早餐</span><div class="q-box"><span class="q-tag q-low">10m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=あか牛の館" target="_blank" class="food-link">あか牛の館</a><span class="food-pos">赤牛丼備案</span><div class="q-box"><span class="q-tag q-mid">30m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=高千穂牛コロッケ" target="_blank" class="food-link">高千穗牛可樂餅</a><span class="food-pos">散步點心</span><div class="q-box"><span class="q-tag q-low">5m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=阿蘇お菓子工房たのや" target="_blank" class="food-link">阿蘇菓子工房</a><span class="food-pos">甜點午茶</span><div class="q-box"><span class="q-tag q-low">10m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=天岩戸カフェ" target="_blank" class="food-link">天岩戶咖啡</a><span class="food-pos">參拜後休息</span><div class="q-box"><span class="q-tag q-low">15m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=高千穂ベーカリー" target="_blank" class="food-link">高千穗烘焙坊</a><span class="food-pos">明日早餐備糧</span><div class="q-box"><span class="q-tag q-low">10m</span></div></div>
                 </div>
             </div>
         </div>
@@ -234,32 +169,32 @@
         <div class="day-title">Day 04：高千穗 ➔ 由布院</div>
         <div class="split-layout">
             <div class="left-itinerary">
-                <div class="spot"><span class="time">09:30</span><a href="https://maps.app.goo.gl/天安河原" class="name">天安河原 / 天岩戶</a></div>
-                <div class="spot extra-spot"><span class="time">13:00</span><a href="https://maps.app.goo.gl/大吊橋" class="name">九重夢大吊橋 <span class="extra-tag">額外</span></a></div>
-                <div class="spot"><span class="time">15:30</span><a href="https://maps.app.goo.gl/金鱗湖" class="name">金鱗湖 / 湯之坪</a></div>
-                <div class="spot extra-spot"><span class="time">17:30</span><a href="https://maps.app.goo.gl/狹霧台" class="name">狹霧台展望台 <span class="extra-tag">額外</span></a></div>
+                <div class="spot"><span class="time">09:30</span><a href="https://www.google.com/maps/search/?api=1&query=天安河原" target="_blank" class="name">天安河原 / 天岩戶</a></div>
+                <div class="spot extra-spot"><span class="time">13:00</span><a href="https://www.google.com/maps/search/?api=1&query=九重夢大吊橋" target="_blank" class="name">九重夢大吊橋 <span class="extra-tag">額外行程</span></a></div>
+                <div class="spot"><span class="time">15:30</span><a href="https://www.google.com/maps/search/?api=1&query=金鱗湖" target="_blank" class="name">金鱗湖 / 湯之坪</a></div>
+                <div class="spot extra-spot"><span class="time">17:30</span><a href="https://www.google.com/maps/search/?api=1&query=狭霧台" target="_blank" class="name">狹霧台展望台 <span class="extra-tag">額外行程</span></a></div>
             </div>
             <div class="right-extra">
-                <div class="box-header">由布院美食地圖 (8間)</div>
+                <div class="box-header">由布院美食 (8間)</div>
                 <div class="food-container">
                     <div class="food-item">
-                        <a href="#" class="food-link">由布まぶし 心 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：老街 ➔ 飯店 之間</span>
-                        <div class="q-box"><span class="q-tag q-high">排 50-80m</span></div>
-                        <div class="food-memo">金鱗湖店排隊比站前店快一點。</div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=由布まぶし心+金鱗湖本店" target="_blank" class="food-link">由布まぶし 心 <i class="fa-solid fa-location-arrow"></i></a>
+                        <span class="food-pos">由布院晚正餐</span>
+                        <div class="q-box"><span class="q-tag q-high">60-80m</span></div>
+                        <div class="food-memo">豐後牛釜飯三吃，排隊名店。</div>
                     </div>
                     <div class="food-item">
-                        <a href="#" class="food-link">B-Speak 蛋糕捲 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：一抵達由布院先去</span>
+                        <a href="https://www.google.com/maps/search/?api=1&query=B-Speak" target="_blank" class="food-link">B-Speak 蛋糕捲 <i class="fa-solid fa-location-arrow"></i></a>
+                        <span class="food-pos">一抵達先去搶</span>
                         <div class="q-box"><span class="q-tag q-high">易完售</span></div>
-                        <div class="food-memo">建議預約，下午通常只剩大捲。</div>
+                        <div class="food-memo">下午去通常只剩大的。建議先去店裡看。</div>
                     </div>
-                    <div class="food-item"><a href="#" class="food-link">Milch 半熟起司 <i class="fa-solid fa-location-dot"></i></a><span class="food-pos">老街散步</span><div class="q-box"><span class="q-tag q-low">10m</span></div></div>
-                    <div class="food-item"><a href="#" class="food-link">金賞可樂餅 <i class="fa-solid fa-location-dot"></i></a><span class="food-pos">老街散步</span><div class="q-box"><span class="q-tag q-low">10m</span></div></div>
-                    <div class="food-item"><a href="#" class="food-link">鞠智 銅鑼燒 <i class="fa-solid fa-location-dot"></i></a><span class="food-pos">下午茶</span><div class="q-box"><span class="q-tag q-mid">25m</span></div></div>
-                    <div class="food-item"><a href="#" class="food-link">Snoopy 茶屋 <i class="fa-solid fa-location-dot"></i></a><span class="food-pos">打卡點</span><div class="q-box"><span class="q-tag q-mid">30m</span></div></div>
-                    <div class="food-item"><a href="#" class="food-link">椎茸燒 <i class="fa-solid fa-location-dot"></i></a><span class="food-pos">街邊點心</span><div class="q-box"><span class="q-tag q-low">5m</span></div></div>
-                    <div class="food-item"><a href="#" class="food-link">古式蕎麥泉 <i class="fa-solid fa-location-dot"></i></a><span class="food-pos">金鱗湖午餐</span><div class="q-box"><span class="q-tag q-mid">30m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=由布院ミルヒ" target="_blank" class="food-link">Milch 半熟起司</a><span class="food-pos">老街散步甜點</span><div class="q-box"><span class="q-tag q-low">10m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=湯布院金賞コロッケ" target="_blank" class="food-link">金賞可樂餅</a><span class="food-pos">老街人氣小吃</span><div class="q-box"><span class="q-tag q-low">10m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=鞠智+由布院" target="_blank" class="food-link">鞠智 銅鑼燒</a><span class="food-pos">精緻下午茶</span><div class="q-box"><span class="q-tag q-mid">25m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=スヌーピー茶屋+由布院" target="_blank" class="food-link">Snoopy 茶屋</a><span class="food-pos">打卡拍照聖地</span><div class="q-box"><span class="q-tag q-mid">30m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=由布院椎茸焼" target="_blank" class="food-link">大香菇椎茸燒</a><span class="food-pos">隱藏版小吃</span><div class="q-box"><span class="q-tag q-low">5m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=古式手打そば泉" target="_blank" class="food-link">古式蕎麥 泉</a><span class="food-pos">湖邊優雅午餐</span><div class="q-box"><span class="q-tag q-mid">30m</span></div></div>
                 </div>
             </div>
         </div>
@@ -269,33 +204,33 @@
         <div class="day-title">Day 05：別府 ➔ 福岡</div>
         <div class="split-layout">
             <div class="left-itinerary">
-                <div class="spot"><span class="time">09:30</span><a href="https://maps.app.goo.gl/動物園" class="name">九州自然動物園</a></div>
-                <div class="spot extra-spot"><span class="time">13:30</span><a href="https://maps.app.goo.gl/十文字" class="name">十文字原展望台 <span class="extra-tag">額外</span></a></div>
-                <div class="spot"><span class="time">15:00</span><a href="https://maps.app.goo.gl/海地獄" class="name">別府海地獄</a></div>
-                <div class="spot extra-spot"><span class="time">16:00</span><a href="https://maps.app.goo.gl/竈門神社" class="name">竈門神社 <span class="extra-tag">額外</span></a></div>
-                <div class="spot"><span class="time">17:30</span><a href="https://maps.app.goo.gl/Outlet" class="name">鳥栖 Outlet 購物</a></div>
+                <div class="spot"><span class="time">09:30</span><a href="https://www.google.com/maps/search/?api=1&query=九州自然動物公園" target="_blank" class="name">九州自然動物園</a></div>
+                <div class="spot extra-spot"><span class="time">13:30</span><a href="https://www.google.com/maps/search/?api=1&query=十文字原展望台" target="_blank" class="name">十文字原展望台 <span class="extra-tag">額外行程</span></a></div>
+                <div class="spot"><span class="time">15:00</span><a href="https://www.google.com/maps/search/?api=1&query=海地獄" target="_blank" class="name">別府海地獄</a></div>
+                <div class="spot extra-spot"><span class="time">16:00</span><a href="https://www.google.com/maps/search/?api=1&query=八幡竈門神社" target="_blank" class="name">竈門神社 <span class="extra-tag">額外行程</span></a></div>
+                <div class="spot"><span class="time">17:30</span><a href="https://www.google.com/maps/search/?api=1&query=鳥栖プレミアム+アウトレット" target="_blank" class="name">鳥栖 Outlet 購物</a></div>
             </div>
             <div class="right-extra">
-                <div class="box-header">別府/大分美食地圖 (8間)</div>
+                <div class="box-header">別府/大分美食 (8間)</div>
                 <div class="food-container">
                     <div class="food-item">
-                        <a href="#" class="food-link">龜正 旋轉壽司 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：動物園 ➔ 展望台 之間</span>
-                        <div class="q-box"><span class="q-tag q-high" style="background:black">排 2h+</span></div>
-                        <div class="food-memo">10:30 先去抽號碼牌是唯一吃法。</div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=亀正くるくる寿司" target="_blank" class="food-link">龜正 旋轉壽司 <i class="fa-solid fa-location-arrow"></i></a>
+                        <span class="food-pos">別府完正餐</span>
+                        <div class="q-box"><span class="q-tag q-high" style="background:#000">2h+</span></div>
+                        <div class="food-memo">別府排隊之王。早上 10 點前去等比較穩。</div>
                     </div>
                     <div class="food-item">
-                        <a href="#" class="food-link">地獄蒸工房 <i class="fa-solid fa-location-dot"></i></a>
-                        <span class="food-pos">建議在：海地獄 ➔ 神社 之間</span>
-                        <div class="q-box"><span class="q-tag q-high">排 50-80m</span></div>
-                        <div class="food-memo">自選食材體驗溫泉蒸。</div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=地獄蒸し工房鉄輪" target="_blank" class="food-link">地獄蒸工房 <i class="fa-solid fa-location-arrow"></i></a>
+                        <span class="food-pos">海地獄參觀完</span>
+                        <div class="q-box"><span class="q-tag q-high">60m</span></div>
+                        <div class="food-memo">自己動手蒸。食材選大分縣產海鮮。</div>
                     </div>
-                    <div class="food-item"><a href="#" class="food-link">岡本屋 布丁 <i class="fa-solid fa-location-dot"></i></a><span class="food-pos">明礬溫泉點心</span><div class="q-box"><span class="q-tag q-mid">25m</span></div></div>
-                    <div class="food-item"><a href="#" class="food-link">東洋軒 雞天 <i class="fa-solid fa-location-dot"></i></a><span class="food-pos">別府晚餐</span><div class="q-box"><span class="q-tag q-mid">40m</span></div></div>
-                    <div class="food-item"><a href="#" class="food-link">中津炸雞 <i class="fa-solid fa-location-dot"></i></a><span class="food-pos">公路小點</span><div class="q-box"><span class="q-tag q-low">10m</span></div></div>
-                    <div class="food-item"><a href="#" class="food-link">資先生烏龍麵 <i class="fa-solid fa-location-dot"></i></a><span class="food-pos">還車前晚餐</span><div class="q-box"><span class="q-tag q-low">10m</span></div></div>
-                    <div class="food-item"><a href="#" class="food-link">一蘭之森 <i class="fa-solid fa-location-dot"></i></a><span class="food-pos">公路休息</span><div class="q-box"><span class="q-tag q-mid">30m</span></div></div>
-                    <div class="food-item"><a href="#" class="food-link">八天堂 奶油包 <i class="fa-solid fa-location-dot"></i></a><span class="food-pos">Outlet休息</span><div class="q-box"><span class="q-tag q-low">免排</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=岡本屋売店" target="_blank" class="food-link">岡本屋 地獄布丁</a><span class="food-pos">明礬溫泉名物</span><div class="q-box"><span class="q-tag q-mid">25m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=とり天+東洋軒" target="_blank" class="food-link">東洋軒 雞天</a><span class="food-pos">別府炸雞始祖</span><div class="q-box"><span class="q-tag q-mid">40m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=中津からあげ" target="_blank" class="food-link">中津炸雞</a><span class="food-pos">公路外帶點心</span><div class="q-box"><span class="q-tag q-low">10m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=資さんうどん" target="_blank" class="food-link">資先生烏龍麵</a><span class="food-pos">返程福岡宵夜</span><div class="q-box"><span class="q-tag q-low">10m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=一蘭の森" target="_blank" class="food-link">一蘭之森</a><span class="food-pos">一蘭工廠參觀</span><div class="q-box"><span class="q-tag q-mid">30m</span></div></div>
+                    <div class="food-item"><a href="https://www.google.com/maps/search/?api=1&query=八天堂+鳥栖" target="_blank" class="food-link">八天堂 奶油包</a><span class="food-pos">Outlet休息點</span><div class="q-box"><span class="q-tag q-low">免排</span></div></div>
                 </div>
             </div>
         </div>
