@@ -20,9 +20,10 @@
         .day-card { background: white; border-radius: 20px; min-height: 96%; box-shadow: 0 5px 25px rgba(0,0,0,0.06); padding: 15px; display: flex; flex-direction: column; }
         .day-title { font-size: 1.3rem; font-weight: bold; margin-bottom: 12px; color: var(--primary); border-left: 6px solid var(--primary); padding-left: 10px; }
 
-        .split-layout { display: flex; gap: 12px; flex-wrap: wrap; flex: 1; }
-        .left-itinerary { flex: 0.9; min-width: 260px; border-right: 1px solid #eee; padding-right: 8px; }
-        .right-extra { flex: 1.4; min-width: 320px; }
+        /* 修改為單欄直向排列 */
+        .split-layout { display: flex; flex-direction: column; gap: 20px; flex: 1; }
+        .left-itinerary { width: 100%; padding-right: 0; }
+        .right-extra { width: 100%; }
 
         .spot { margin-bottom: 15px; position: relative; padding-left: 20px; border-left: 2px solid #ddd; }
         .spot::before { content: ''; position: absolute; left: -7px; top: 0; width: 12px; height: 12px; background: var(--primary); border-radius: 50%; border: 2px solid white; }
@@ -31,7 +32,8 @@
         .name { display: block; color: var(--link); text-decoration: none; font-size: 0.95rem; font-weight: bold; }
         .extra-tag { font-size: 0.65rem; color: var(--extra); font-weight: bold; border: 1px solid var(--extra); padding: 1px 4px; border-radius: 3px; margin-left: 4px; vertical-align: middle; }
 
-        .food-container { max-height: 72vh; overflow-y: auto; padding-right: 5px; }
+        /* 調整手機版美食容器滾動，避免與外層滑動衝突 */
+        .food-container { max-height: none; padding-right: 0; }
         .box-header { font-size: 0.9rem; font-weight: bold; color: #856404; margin-bottom: 10px; padding: 10px; background: #FFFBF0; position: sticky; top: 0; z-index: 5; border-radius: 8px; border: 1px solid #ffeeba; }
         .food-item { background: #fff; padding: 10px; border-radius: 12px; margin-bottom: 10px; border: 1px solid #eee; }
         .food-link { color: var(--food); font-weight: bold; text-decoration: none; font-size: 0.9rem; display: flex; justify-content: space-between; }
