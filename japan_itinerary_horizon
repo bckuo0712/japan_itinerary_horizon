@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>九州 5 日遊｜滑動手冊</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #2D5A27;
+            --bg: #f0f2f5;
+        }
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            height: 100vh;
+            overflow: hidden; /* 防止網頁上下亂捲 */
+        }
+        
+        /* 標題欄 */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            height: 60px;
+            box-sizing: border-box;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+        }
+        header h1 { margin: 0; font-size: 1.2rem; }
+
+        /* 滑動容器 */
+        .swiper {
+            width: 100%;
+            height: calc(100vh - 60px); /* 扣掉 header 高度 */
+        }
+
+        .swiper-slide {
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto; /* 內容太長時允許個別分頁捲動 */
+        }
+
+        /* 卡片樣式 */
+        .day-card {
+            background: white;
+            border-radius: 20px;
+            min-height: 80%;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            padding: 25px;
+            position: relative;
+        }
+
+        .day-num {
+            color: var(--primary);
+            font-size: 2.5rem;
+            font-weight: 800;
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+        }
+
+        .day-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* 景點項目 */
+        .spot {
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px dashed #ddd;
+        }
+        .spot::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+        .time { font-size: 0.8rem; color: #888; font-weight: bold; }
+        .name {
+            display: block;
+            color: #2980b9;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 3px 0;
+        }
+        .name i { font-size: 0.8rem; }
+        .desc { font-size: 0.9rem; color: #666; margin: 0; }
+
+        /* 指示箭頭 */
+        .swiper-pagination-bullet-active { background: var(--primary); }
+        .hint {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #aaa;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>九州 5 日旅遊手札</h1>
+</header>
+
+<div class="swiper">
+    <div class="swiper-wrapper">
+        
+        <div class="swiper-slide">
+            <div class="day-card">
+                <span class="day-num">01</span>
+                <div class="day-title">柳川 & 浮羽</div>
+                <div class="spot">
+                    <span class="time">10:00</span>
+                    <a href="https://www.google.com/maps/search/柳川遊船" target="_blank" class="name">柳川遊船 <i class="fa-solid fa-location-arrow"></i></a>
+                    <p class="desc">水鄉漫遊、必吃蒸籠鰻魚飯。</p>
+                </div>
+                <div class="spot">
+                    <span class="time">14:30</span>
+                    <a href="https://www.google.com/maps/search/浮羽神社" target="_blank" class="name">浮羽神社 <i class="fa-solid fa-location-arrow"></i></a>
+                    <p class="desc">絕美千本鳥居俯瞰市景。</p>
+                </div>
+                <p class="hint">← 左右滑動切換天數 →</p>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="day-card">
+                <span class="day-num">02</span>
+                <div class="day-title">熊本城 & 阿蘇門戶</div>
+                <div class="spot">
+                    <span class="time">09:30</span>
+                    <a href="https://www.google.com/maps/search/熊本城" target="_blank" class="name">熊本城 <i class="fa-solid fa-location-arrow"></i></a>
+                    <p class="desc">日本三大名城巡禮。</p>
+                </div>
+                <div class="spot">
+                    <span class="time">14:00</span>
+                    <a href="https://www.google.com/maps/search/白川水源" target="_blank" class="name">白川水源 <i class="fa-solid fa-location-arrow"></i></a>
+                    <p class="desc">裝一瓶甘甜的阿蘇名水。</p>
+                </div>
+                <div class="spot">
+                    <span class="time">16:30</span>
+                    <a href="https://www.google.com/maps/search/草千里之濱" target="_blank" class="name">草千里之濱 <i class="fa-solid fa-location-arrow"></i></a>
+                    <p class="desc">絕美草原看牛馬與火山。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="day-card">
+                <span class="day-num">03</span>
+                <div class="day-title">火山 & 高千穗</div>
+                <div class="spot">
+                    <span class="time">09:00</span>
+                    <a href="https://www.google.com/maps/search/阿蘇山火山口" target="_blank" class="name">阿蘇山火山口 <i class="fa-solid fa-location-arrow"></i></a>
+                    <p class="desc">直擊活火山（需查即時管制）。</p>
+                </div>
+                <div class="spot">
+                    <span class="time">14:00</span>
+                    <a href="https://www.google.com/maps/search/高千穗峽" target="_blank" class="name">高千穗峽 <i class="fa-solid fa-location-arrow"></i></a>
+                    <p class="desc">神話之鄉划船體感瀑布。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="day-card">
+                <span class="day-num">04</span>
+                <div class="day-title">雲海 & 由布院</div>
+                <div class="spot">
+                    <span class="time">06:00</span>
+                    <a href="https://www.google.com/maps/search/國見之丘展望台" target="_blank" class="name">國見之丘 <i class="fa-solid fa-location-arrow"></i></a>
+                    <p class="desc">清晨拼雲海奇景。</p>
+                </div>
+                <div class="spot">
+                    <span class="time">15:00</span>
+                    <a href="https://www.google.com/maps/search/金鱗湖" target="_blank" class="name">由布院金鱗湖 <i class="fa-solid fa-location-arrow"></i></a>
+                    <p class="desc">漫步溫泉老街與夢幻湖泊。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="day-card">
+                <span class="day-num">05</span>
+                <div class="day-title">動物園 & 返回</div>
+                <div class="spot">
+                    <span class="time">10:00</span>
+                    <a href="https://www.google.com/maps/search/九州自然動物園" target="_blank" class="name">九州自然動物園 <i class="fa-solid fa-location-arrow"></i></a>
+                    <p class="desc">叢林巴士餵食野生猛獸。</p>
+                </div>
+                <div class="spot">
+                    <span class="time">17:00</span>
+                    <span class="name" style="color:#999">返抵福岡還車</span>
+                    <p class="desc">結束美好的九州之行。</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        loop: false,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        // 加入彈性滑動效果
+        resistanceRatio: 0.5,
+    });
+</script>
+</body>
+</html>
